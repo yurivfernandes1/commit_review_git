@@ -59,7 +59,7 @@ class CloudFlareReport:
         raise Exception("Max retries exceeded")
 
     @property
-    def _get_deepseek_data(self) -> str:
+    def _get_cloudflare_data(self) -> str:
         """Busca os dados da API do Cloudflare para efetuar os tratamentos necessários."""
         print("Iniciado...")
         body = json.dumps(
@@ -137,4 +137,4 @@ class CloudFlareReport:
 
     def get_report(self) -> str:
         """Método público para obter o relatório completo."""
-        return self._get_deepseek_data
+        return self._get_cloudflare_data
